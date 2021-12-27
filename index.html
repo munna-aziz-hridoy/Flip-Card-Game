@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" async></script>
+    <title>Mix-Or-Match</title>
+  </head>
+  <body>
+    <h1 class="page-title">Mix-Or-Match</h1>
+    <div class="overlay-text visible">Click to Start</div>
+    <div id="game-over-text" class="overlay-text">
+      GAME OVER
+      <span class="overlay-text-small">Click to Start</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+      Victory
+      <span class="overlay-text-small">Click to Start</span>
+    </div>
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">Time <span id="time-remaining">00</span></div>
+        <div class="game-info">Flips <span id="flip">0</span></div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Bat.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Bat.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Bones.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Bones.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Cauldron.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Cauldron.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Dracula.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Dracula.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Eye.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Eye.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Ghost.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Ghost.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Pumpkin.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Pumpkin.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Skull.png" class="card-value" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/Cobweb.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Spider.png" class="spider" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-top-right"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-left"
+          />
+          <img
+            src="assets/images/CobwebGrey.png"
+            class="cob-web cob-web-bottom-right"
+          />
+          <img src="assets/images/Skull.png" class="card-value" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
